@@ -1,0 +1,72 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #00bfff;
+}
+
+#center {
+    position: static;
+    margin-top: 50px;
+    text-align: center;
+}
+
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#divCenter {
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+
+#edit {
+    position: relative;
+    top: 50px;
+    left: 10px;
+    text-align: center;
+}
+
+#journalEntry {
+    position: static;
+    margin-top: 200px;
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+}
+
+
+textarea {
+    resize: none;
+}
+
+.horizontal {
+    position: relative;
+    top: 200px;
+    left: 300px;
+
+}
