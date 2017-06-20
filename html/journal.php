@@ -18,16 +18,10 @@ $activePage = "journal";
     <?php
     include "navbar.php";
     ?>
-<div id="journalEntry">
-    <textarea rows="10" cols="50" placeholder="Journal entries will appear here"></textarea>
-    <form id="edit">
-        <input type="submit" value="Edit">
-    </form>
-</div>
 
-    <div class="panel panel-default">
+    <div class="panel">
 
-        <div class="panel-heading">Your Journal Entries</div>
+        <h1>Your Journal Entries</h1><hr>
         <table id="orders" class="table table-responsive">
             <thead>
             <tr><!--headings-->
@@ -61,8 +55,7 @@ $activePage = "journal";
                         <td><?php print($rows['entry']); ?></td>
                         <td>
                             <div class="btn-group">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Select<span class="caret"></span></button>
-                                <ul class="dropdown-menu" role="menu">
+                                <ul>
                                     <li><a onclick="UpdateOrderModal('<?php print($rows['id']); ?>','<?php print($rows['entry']); ?>');">Edit</a></li>
                                     <li><a onclick="DeleteItem('<?php print($rows['id']); ?>');">Delete</a></li>
                                 </ul>
