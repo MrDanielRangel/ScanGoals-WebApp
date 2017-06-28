@@ -4,26 +4,74 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/mystyle.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
 
 
+        form{
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .center{
+            margin: auto;
+            width: 60%;
+            padding: 270px;
+        }
+
+        input[type=text], input[type=password]{
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        button {
+            background-color: #00bfff;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 50%;
+        }
+
+        .container{
+            padding: 16px;
+        }
+
+        #center {
+            position:static;
+            margin-top: 100px;
+        }
+
+
+
+    </style>
 </head>
 <body>
 
-    <h1>Scan Goals</h1>
-    <div class="container">
+    <div id="center">
+        <h1>ScanGoals</h1>
 
-        <img src="../img/profile.jpg" alt="profile-pic">
-        <form action="../include/Login.php" method="POST">
-            <div class="form-input">
-                <input type="text" name="username" placeholder="Enter Username" required>
-            </div>
-            <div class="form-input">
-                <input type="password" name="password" placeholder="Enter Password" required>
-            </div>
+        <form>
+            <div class="container">
 
-            <input class="btn-login" type="submit" name="submit">
+                <label><b>Username</b></label><br />
+                <input type="text" placeholder="Enter Username" name="uname" required/><br />
+
+                <label><b>Password</b></label><br />
+                <input type="password" placeholder="Enter password" name="psw" required/>
+
+                <button type="submit">Login</button>
+            </div>
         </form>
     </div>
 
