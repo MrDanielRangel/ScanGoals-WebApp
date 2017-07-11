@@ -49,6 +49,8 @@ include "navbar.php";
 <h1>How to use the app:</h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9Y2DMu-xQ9k" frameborder="0" allowfullscreen></iframe>
 
+<hr />
+
 
 <br />
 <h1>Equipment instructional videos:</h1>
