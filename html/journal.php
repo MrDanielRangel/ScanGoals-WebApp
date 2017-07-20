@@ -1,4 +1,5 @@
 <?php
+include "../include/session.php";
 $activePage = "journal";
 ?>
 
@@ -10,6 +11,12 @@ $activePage = "journal";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../css/mystyle.css">
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#journalForm").hide();
+        });
+    </script>
 
 
 </head>
@@ -21,6 +28,16 @@ $activePage = "journal";
 
     <div class="panel">
 
+        <div id="journalForm">
+            <h2>New Journal Entry</h2>
+            <hr>
+            <form name="frmItems" action="" onsubmit="AddItem(myId, action1); return false;" method="POST">
+                <input type="text" name="msg" title="journalMsg" placeholder="Enter Content" required>
+                <input type="submit">
+            </form>
+        </div>
+
+        <button onclick="AddOrderModal()" type="button">Add Journal Entry</button>
         <h1>Your Journal Entries</h1><hr>
         <table id="orders" class="table table-responsive">
             <thead>
@@ -36,7 +53,7 @@ $activePage = "journal";
             include "../include/dbconnect.php";
 
             //retrieve data from the database
-            $sql = mysqli_query($conn, "SELECT * FROM journal");
+            $sql = mysqli_query($conn, "SELECT id, entry, date FROM journal WHERE username='$login_user'");
 
             //array that holds all the fields
             $rows = mysqli_fetch_assoc($sql);
@@ -50,7 +67,6 @@ $activePage = "journal";
                 do{
                     ?>
                     <tr>
-                        <!--<td><?php //print($rows['id']); ?></td>-->
                         <td><?php print($rows['date']); ?></td>
                         <td><?php print($rows['entry']); ?></td>
                         <td>
@@ -73,5 +89,42 @@ $activePage = "journal";
         </table>
     </div>
 
+
+    <script type="text/javascript">
+
+        var action1;
+        var myId;
+
+        function AddOrderModal()
+        {
+            //new Action
+            action1 = 'NEW';
+
+            //clearing previous values
+            document.frmItems.msg.value = "";
+
+            //show form
+            $(document).ready(function(){
+                $("#journalForm").show();
+            });
+        }
+
+        function UpdateOrderModal(id, msg)
+        {
+            //have our EDIT Action
+            action1 = 'EDIT';
+            myId = id;
+
+            //find the field in the document and then supply the value
+            document.frmItems.msg.value = msg;
+
+            //show form
+            $(document).ready(function(){
+                $("#journalForm").show();
+            });
+        }
+
+    </script>
+    <script src="../js/ajaxOrder.js"></script>
     </body>
 </html>

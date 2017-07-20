@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +62,7 @@
     <div id="center">
         <h1>ScanGoals</h1>
 
-        <form>
+        <form action="../include/Login.php" method="POST">
             <div class="container">
 
                 <label><b>Username</b></label><br />
@@ -72,7 +73,7 @@
 
                 <button type="submit">Login</button>
 
-                <button formaction="register">Register</button>
+                <button formaction="register"><a href="register.php">Register</a></button>
             </div>
         </form>
     </div>

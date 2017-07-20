@@ -65,10 +65,10 @@ $activePage = "register";
 
     <h1> ScanGoals Account Registration</h1>
 
-    <form action="/action_page.php">
+    <form action="../include/registerProcess.php" method="POST">
         <div class="container">
             <label><b>Username</b></label><br />
-            <input type="text" placeholder="Enter Username" name="email" required><br />
+            <input type="text" placeholder="Enter Username" name="username" required><br />
 
             <label><b>Password</b></label><br />
             <input type="password" placeholder="Enter Password" name="psw" required><br />
@@ -77,7 +77,7 @@ $activePage = "register";
             <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
 
             <div class="clearfix">
-                <button id="cancel" type="button">Cancel</button>
+                <button id="cancel" type="button"><a href="index.php">Cancel</a></button>
                 <button type="submit">Sign Up</button>
             </div>
         </div>

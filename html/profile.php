@@ -1,4 +1,5 @@
 <?php
+include "../include/session.php";
 $activePage = "profile";
 ?>
 
@@ -33,7 +34,7 @@ include "navbar.php";
         include "../include/dbconnect.php";
 
         //retrieve data from the database
-        $sql = mysqli_query($conn, "SELECT * FROM users");
+        $sql = mysqli_query($conn, "SELECT username, age, weight FROM users WHERE username='$login_session'");
 
         //array that holds all the fields
         $rows = mysqli_fetch_assoc($sql);
@@ -54,7 +55,6 @@ include "navbar.php";
                         <div class="btn-group">
                             <ul>
                                 <li><a href="#" onclick="UpdateOrderModal('<?php print($rows['id']); ?>','<?php print($rows['entry']); ?>');">Edit</a></li>
-                                <li><a href="#" onclick="DeleteItem('<?php print($rows['id']); ?>');">Delete</a></li>
                             </ul>
                         </div>
                     </td>
