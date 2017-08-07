@@ -9,11 +9,13 @@ session_start();
 
 //storing session
 $user_check = $_SESSION['login_user'];
+$islogin = false;
 
 //query to fetch complete information of user
 $session_sql = mysqli_query($con, "SELECT username FROM users WHERE username='$user_check'");
 $row = mysqli_fetch_assoc($session_sql);
 $login_session = $row['username'];
+$islogin = true;
 
 //check if user is login, if not send it back to login
 if(!isset($login_session))

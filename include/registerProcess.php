@@ -37,6 +37,8 @@
 
         if(mysqli_query($conn, $sql))
         {
+            //initialize session
+            $_SESSION['login_user'] = $username;
             echo "Successfully Entered Into Database!<br>";
             header("Location: ../html/profile.php");
         }
