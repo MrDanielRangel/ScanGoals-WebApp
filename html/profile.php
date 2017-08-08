@@ -53,7 +53,6 @@ include "navbar.php";
             <th>Age</th>
             <th>Weight</th>
             <th>Height</th>
-            <th>Profile Picture</th>
         </tr>
         </thead>
 
@@ -85,6 +84,7 @@ include "navbar.php";
                         <div class="btn-group">
                             <ul>
                                 <li><a href="#" onclick="UpdateOrderModal('<?php print($rows['id']); ?>',
+                                            '<?php print($rows['username']); ?>',
                                             '<?php print($rows['age']); ?>',
                                             '<?php print($rows['weight']); ?>',
                                             '<?php print($rows['height']); ?>');">Edit</a></li>
