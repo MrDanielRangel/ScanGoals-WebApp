@@ -8,7 +8,7 @@
 
     //grabs input from user
     $username = $_POST["uname"];
-    $password = $_POST["psw"];
+    $password = md5($_POST["psw"]);
 
     //prevent mysql injection
     //$username = stripcslashes($username);

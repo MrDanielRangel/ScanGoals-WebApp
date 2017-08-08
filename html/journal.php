@@ -32,6 +32,7 @@ $activePage = "journal";
             <h2>New Journal Entry</h2>
             <hr>
             <form name="frmItems" action="" onsubmit="AddItem(myId, action1); return false;" method="POST">
+                <input type="text" name="name" title="name" value="<?php echo $_SESSION['login_user']; ?>" disabled>
                 <input type="text" name="msg" title="journalMsg" placeholder="Enter Content" required>
                 <input type="submit">
             </form>
@@ -52,8 +53,10 @@ $activePage = "journal";
 
             include "../include/dbconnect.php";
 
+            $loginUser = $_SESSION['login_user'];
+
             //retrieve data from the database
-            $sql = mysqli_query($conn, "SELECT id, entry, date FROM journal WHERE username='$login_user'");
+            $sql = mysqli_query($conn, "SELECT id, entry, date FROM journal WHERE username='$loginUser'");
 
             //array that holds all the fields
             $rows = mysqli_fetch_assoc($sql);

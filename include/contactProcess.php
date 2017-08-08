@@ -7,7 +7,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['msg']))
     $email = $_POST['email'];
     $msg = nl2br($_POST['msg']); //change new lines to break tags
 
-    $to = "santos@phoenixunion.org";
+    $to = "scangoals@gmail.com";
     $from = $email;
     $subject = "Contact Form Message";
     $message = '<b>Name: </b>'.$name .'<br><b>Email: </b>'.$email.'<p>'.$msg.'</p>';
