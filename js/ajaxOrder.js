@@ -89,7 +89,7 @@ function DeleteItem(myId) {
 function UpdateProfile(myId, action1)
 {
     var myId = myId;
-    var name = document.frmItems.name.value = name;
+    var username = document.frmItems.name.value = name;
     var age = document.frmItems.age.value = age;
     var weight = document.frmItems.weight.value = weight;
     var height = document.frmItems.height.value = height;
@@ -104,6 +104,11 @@ function UpdateProfile(myId, action1)
     ajax.onreadystatechange=function () {
         if(ajax.readyState == 4)
         {
+            alert(username);
+            alert(age);
+            alert(weight);
+            alert(height);
+
             alert("Successfully Updated Profile");
             window.location.reload(true);
         }
@@ -112,6 +117,6 @@ function UpdateProfile(myId, action1)
     //hide from url
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-    ajax.send("name="+name+"&myId="+myId+"&age="+age+"&weight="+weight+"&height="+height);
+    ajax.send("name="+username+"&myId="+myId+"&age="+age+"&weight="+weight+"&height="+height);
 
 }
