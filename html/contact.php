@@ -16,6 +16,10 @@ $activePage = "contact";
         html {
             background-color: rgb(38, 32, 63);
         }
+
+        input {
+            color: black;
+        }
     </style>
 
 <script>
