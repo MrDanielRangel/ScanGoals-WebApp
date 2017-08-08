@@ -59,14 +59,38 @@
             background-position: center;
         }
 
+        html {
+            background-color: rgb(38, 32, 63);
+        }
+
+        h1 {
+            color: white;
+        }
+
+        label {
+            color: white;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        }
+
+        #imgCenter {
+            margin-top: 100px;
+        }
+
 
 
     </style>
 </head>
 <body>
 
+<div id="imgCenter">
+    <img src="../img/logo.png" alt="Scan Goals Logo" style="width:304px;height:228px;" >
+</div>
+
     <div id="center">
-        <h1>ScanGoals</h1>
 
         <form action="../include/Login.php" method="POST">
             <div class="container">

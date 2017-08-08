@@ -40,6 +40,14 @@ $activePage = "videos";
         .active {
             background-color: rgb(87, 166, 216);
         }
+
+        html {
+            background-color: rgb(38, 32, 63);
+        }
+
+        * {
+            color: white;
+        }
     </style>
 </head>
 <body>

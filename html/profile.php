@@ -22,6 +22,10 @@ $activePage = "profile";
         th, td{
             text-align: center;
         }
+
+        html {
+            background-color: rgb(38, 32, 63);
+        }
     </style>
 </head>
 <body>
