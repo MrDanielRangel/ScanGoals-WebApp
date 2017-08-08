@@ -14,6 +14,37 @@ $activePage = "home";
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../css/mystyle.css">
 
+    <style>
+
+        html {
+            background-color: rgb(38, 32, 63);
+        }
+
+        p {
+            color: white;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        }
+
+        #imgCenter {
+            margin-top: 100px;
+        }
+
+        #centerParagraph {
+            margin-left: 100px;
+            margin-right: 100px;
+            text-align: justify;
+        }
+
+    </style>
+
 
 </head>
 <body>
@@ -21,8 +52,15 @@ $activePage = "home";
 include "navbar.php";
 ?>
 
+<div id="imgCenter">
+    <img src="../img/logo.png" alt="Scan Goals Logo" style="width:304px;height:228px;" >
+</div>
+
 <div>
 <h2 id="center">Welcome <?php echo "<i>".$_SESSION['login_user']."</i>"; ?> to ScanGoals!</h2>
+</div>
+
+<div id="centerParagraph">
 <p>Thank you for visiting ScanGoals. Now that you've logged into your account you can access all of your information here.
     Using the navigation links at the top you can access your: Profile, videos, and journal. If you have any questions,
     concerns, or feedback to provide please click on the contact us link to shoot us an email. We love hearing from our
