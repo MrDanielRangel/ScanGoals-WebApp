@@ -18,8 +18,8 @@ $login_session = $row['username'];
 $islogin = true;
 
 //check if user is login, if not send it back to login
-/*if(!isset($login_session))
+if(!isset($login_session))
 {
     mysqli_close($con);
     header("Location: ../html/index.php");
-}*/
+}
