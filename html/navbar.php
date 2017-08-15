@@ -1,4 +1,6 @@
 
+
+
 <ul>
     <li <?php if($activePage == "home"){echo "class='active'";}?>><a href="home.php">Home</a></li>
     <li <?php if($activePage == "journal"){echo "class='active'";}?>><a href="journal.php">Journal</a></li>

@@ -30,7 +30,12 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: rgb(87, 166, 216);
+    /*background-color: rgb(87, 166, 216);*/
+
+    background-image: url('../img/button.png');
+    background-size: 100%;
+    background-position: center;
+
 }
 
 #center {
