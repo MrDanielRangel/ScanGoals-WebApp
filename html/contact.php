@@ -20,6 +20,12 @@ $activePage = "contact";
         input {
             color: black;
         }
+
+        .active {
+            background-image: url('../img/button.png');
+            background-size: 250%;
+            background-position: center;
+        }
     </style>
 
 <script>

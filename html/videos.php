@@ -38,7 +38,9 @@ $activePage = "videos";
         }
 
         .active {
-            background-color: rgb(87, 166, 216);
+            background-image: url('../img/button.png');
+            background-size: 400%;
+            background-position: center;
         }
 
         html {
